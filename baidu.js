@@ -9,7 +9,7 @@ $(function() {
     // 验证码
     var count = 30;
     $getCode.click(function(){
-        const countDown = setInterval(() => {
+        var countDown = setInterval(function(){
             if(count == 0) {
                 $(this).attr("disabled", false);
                 $(this).attr("value", "获取验证码");
