@@ -11,13 +11,13 @@ $(function() {
     $getCode.click(function(){
         var countDown = setInterval(function(){
             if(count == 0) {
-                $(this).attr("disabled", false);
-                $(this).attr("value", "获取验证码");
+                $getCode.attr("disabled", false);
+                $getCode.attr("value", "获取验证码");
                 count = 30;
                 clearInterval(countDown);
             } else {
-                $(this).attr("disabled", true);
-                $(this).attr("value", "重新发送(" + count + ")");
+                $getCode.attr("disabled", true);
+                $getCode.attr("value", "重新发送(" + count + ")");
                 count--;
             }
         },1000)
